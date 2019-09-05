@@ -3,8 +3,8 @@
     <li><a routerLink="/">Home</a></li>
     <li><a routerLink="#">Contact</a></li>
     <li><a routerLink="/about">About</a></li>
-    <li><a routerLink="/user/register">Register User</a></li>
+    <li *ngIf="getLoggedState()"><a routerLink="/user/register">Register User</a></li>
     <li><a routerLink="/user/list">List Users</a></li>
-    <li><a routerLink="/user/login">Login</a></li>
+    <li *ngIf="!getLoggedState()"><a routerLink="/user/login">Login</a></li>
   </ul>
 </div>

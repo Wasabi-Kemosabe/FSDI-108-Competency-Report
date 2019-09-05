@@ -8,7 +8,16 @@ export class DataService {
 
   userList: User[] = [];
 
-  constructor() { }
+  constructor() {
+    // default user
+    var user = new User();
+    user.email = 'admin@gmail.com';
+    user.password = 'qwerty';
+    user.firstName = 'Admin';
+    user.lastName = 'User';
+
+    this.userList.push(user);
+  }
 
   public sayHello() {
     console.log('Hello from service ts');
